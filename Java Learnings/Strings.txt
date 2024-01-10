@@ -1,0 +1,8 @@
+// how to convert the string to charArray
+String s="yuvaraj"
+char arr[]=s.toCharArray();
+
+// how to convert the integer number into binarynumber
+int n=90;
+String str=Character.toBinaryString(n);
+//to String 

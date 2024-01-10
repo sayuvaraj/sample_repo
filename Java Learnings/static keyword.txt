@@ -1,0 +1,38 @@
+public class Main
+{   
+    public static  void greet(){
+        System.out.println("hey man");
+    }
+    public void greet1(){
+        System.out.println("hey man from not static");
+    }
+	public static  void main(String[] args) {
+	      Main m=new Main();
+	      greet();
+	      m.greet1();
+	}
+}
+ we can create the static variables for the entire class.. to access the static only need of 
+class Student{
+  public static int age=78;
+}
+public class Main
+{   
+    public static  void greet(){
+        System.out.println("hey man");
+    }
+    public void greet1(){
+        System.out.println("hey man from not static");
+    }
+	public static  void main(String[] args) {
+	      Main m=new Main();
+	      greet();
+	      m.greet1();
+	      /*Student s=new Student();
+	      
+	      System.out.println(s.age);
+	      
+	      */
+	      
+	}
+}

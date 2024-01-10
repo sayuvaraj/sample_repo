@@ -1,0 +1,76 @@
+                                                                   // Stack and its methods
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	//imp operations:creation,deletion,add,update,read,peek,isEmpty(),size
+	// creation,deletion,
+	Stack<Integer>s=new Stack<>();
+	s.add(23);
+	s.push(34);
+	s.push(88);
+	s.push(89);
+	// traversing the stack 
+	while(!s.isEmpty()){
+	    System.out.print(s.pop() + " ");
+	}
+	// deleting the top most element 
+	  s.pop();
+	//seeing the topmost element in the stack 
+	  System.out.println(s.peek());
+	//clearing the stack 
+	  s.clear();
+	//size of the Stack
+	System.out.println(s.size());
+	if(s.isEmpty())
+	System.out.println("stack is empty");
+        // to check the particular value is present or not in the stack 
+        if( s.contains(element)){
+         System.out.println("stack is contains the value"+ element);
+         }
+
+}
+}
+
+                                                                // Queue and its methods..
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	//imp operations:creation,deletion,add,update,read,peek,isEmpty(),size,contains()..
+	// creation,deletion,
+	Queue<Integer>s=new LinkedList<>();
+	s.add(23);
+	s.add(34);
+	s.add(88);
+	s.add(89);
+	// traversing the queue 
+	while(!s.isEmpty()){
+	   //s.remove and do something like manipulation
+	    System.out.print(s.remove() + " ");
+	}
+	System.out.println();
+	System.out.println("queue is empty");
+	s.add(90);
+	s.add(901);
+	// check the whether the particular value is present or not.
+	 if(s.contains(90)){
+	     System.out.println("queue contains the value ");
+	 }
+	// seeing the topmost element in the queue..
+	  System.out.println(s.peek());
+	// deleting the top most element 
+	  s.remove();
+	// size of the queue
+	System.out.println(s.size());
+	// clearing the queue 
+	  s.clear();
+	if(s.isEmpty())
+	System.out.println("queue is empty");
+}
+}

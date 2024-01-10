@@ -1,0 +1,45 @@
+import java.util.*;
+public class Main
+
+{   
+    public static void arraylist(){
+        	/*	ArrayList<Integer>l=new ArrayList<>();
+		l.add(45);
+		l.add(33);
+		l.add(44);
+		l.add(90);
+		l.set(3,3); /// updating the element at specified index
+		l.add(0,1); // inserting the element at specified index
+     	//	l[1]=899;
+		l.set(1,899);
+		
+     	//	l.pop();
+		for(int i=0;i<l.size();i++){
+		    System.out.println(l.get(i)+" ");
+		 }
+		
+	      //System.out.println(l);*/
+    }
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+	  LinkedHashMap<Integer,Integer>h=new LinkedHashMap<>();
+	  h.put(3,3);
+	  h.put(23,34);
+	  h.put(34,78);
+	  h.put(44,89);
+	  if(h.containsKey(44)){
+	      h.put(444,445);
+	      h.remove(44);
+	      System.out.println("yes,key contains");
+	  }
+	  if(h.containsValue(78)){
+	      System.out.println("yes,value contains");
+	  }
+	  for(Map.Entry<Integer,Integer>h1:h.entrySet()){
+	      System.out.println(h1.getKey()+" "+h1.getValue());
+	  }
+	  System.out.println(h.size());
+	  System.out.println()
+	  	
+	}
+}

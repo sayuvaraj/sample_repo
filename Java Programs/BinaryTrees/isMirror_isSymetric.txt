@@ -1,0 +1,126 @@
+Mr Rishil is interested to work on Data Structures.
+He has constructed a BinaryTree-BT.
+
+He asked his friend Anil to check whether BT is self mirror tree or not.
+Can you help Anil to find and return "true" if the given BT is a self mirror tree,
+otherwise return "false".
+
+Implement the class Solution:
+   1. public boolean isSelfMirrorTree(BinaryTreeNode root): returns a boolean value.
+  
+NOTE:
+	- In the tree '-1', indicates empty(null).
+   
+Input Format:
+-------------
+A single line of space separated integers, values at the treenode
+
+Output Format:
+--------------
+Print a boolean value.
+
+
+Sample Input-1:
+---------------
+2 1 1 2 3 3 2
+
+Sample Output-1:
+----------------
+true
+
+TESTCASES:
+-----------------------------
+
+case =1
+input =2 1 1 2 3 3 2
+output =true
+
+case =2
+input =2 1 1 -1 3 -1 3
+output =false
+
+case =3
+input =2 1 1 -1 3 3 -1 -1 -1 -1 3 3 -1 -1 -1
+output =true
+
+case =4
+input =2 1 1 2 3 3 2 -1 1 2 3 1 2 3 -1
+output =false
+
+case =5
+input =1 2 2 3 2 2 3 4 3 2 1 1 2 3 4 8 7 6 5 4 5 6 7 7 6 5 4 5 6 7 8
+output =true
+
+case =6
+input =1 2 2 3 2 2 3 4 3 2 1 1 2 3 4 8 7 6 5 4 5 6 7 8 7 6 5 4 4 5 6
+output =false
+
+case =7
+input =1 2 2 3 4 4 3 4 -1 -1 5 -1 5 -1 4 5 6 7 8 -1 -1 -1 -1 -1 -1 -1 -1 8 7 6 5
+output =false
+
+case =8
+input =1 2 2 3 4 4 3 4 5 -1 -1 -1 -1 5 4 5 6 7 8 -1 -1 -1 -1 -1 -1 -1 -1 8 7 6 5
+output =true
+
+
+
+Sample Input-2:
+---------------
+2 1 1 -1 3 -1 3
+
+Sample Output-2:
+----------------
+false
+
+
+
+
+Solution
+/*
+//TreeNode Structure for Your Reference..
+
+class BinaryTreeNode{
+	public int data; 
+	public BinaryTreeNode left, right; 
+	public BinaryTreeNode(int data){
+		this.data = data; 
+		left = null; 
+		right = null; 
+	}
+}
+
+*/
+
+class Solution {
+    public boolean helper(BinaryTreeNode root1,BinaryTreeNode root2){
+        if(root1==null && root2==null){
+            return true;
+        }
+        if((root1!=null && root2==null) || (root1==null && root2!=null) || (root1.data!=root2.data)){
+            return false;
+        }
+        /*if(root1!=null && root2!=null){
+            if(root1.data!=-1 && root2.data!=-1)
+            {
+            if(root1.data!=root2.data)
+               {
+                   return false;
+               }
+            }
+            if(root1.data==-1 && root2.data==-1){
+                return true;
+            }
+        
+        }*/
+        return helper(root1.left,root2.right)&& helper(root1.right,root2.left);
+    }
+    public boolean isSelfMirrorTree(BinaryTreeNode root) {
+        // Implement Your Code here..
+        if(root==null){
+            return false;
+        }
+        return helper(root.left,root.right);
+    }
+    
+}

@@ -1,0 +1,27 @@
+ thisdict={}
+// creation the dictionary
+thisdict['yuvaraj']=8
+thisdict['akash']=88 
+// updation of dictionary
+thisdict.update({'vishnu':90})
+// traversing the dict for only keys
+for x in thisdict.keys():
+    print(x," ")
+// traversing the dict for only values 
+for y in thisdict.values():
+    print(y," ")
+// traversing the dict for keys and values
+for x,y in thisdict.items():
+    print(x," ",y)
+print(thisdict)
+// updating the dict items 
+thisdict['shiva']=7
+// remove the item in dict
+thisdict.pop('yuvaraj')
+//deleting the dict 
+thisdict.clear()
+thisdict['yuvaraj']=9
+print(thisdict)
+t=thisdict
+print("printing the dictionary from the ")
+print(t)

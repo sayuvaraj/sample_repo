@@ -1,0 +1,45 @@
+import java.util.*;
+ class vertex {
+    public int src;
+    public int dest;
+    public int weight;
+       public vertex(int s,int d,int w){
+           this.src=s;
+           this.dest=d;
+           this.weight=w;
+       }
+}
+public class Main
+{   public static void creategraph(ArrayList<vertex>graph[]){
+    for(int i=0;i<graph.length;i++){
+        graph[i]=new ArrayList<vertex>();
+    }
+    graph[0].add(new vertex(0,1,3));
+     graph[1].add(new vertex(1,3,3));
+     graph[1].add(new vertex(1,0,3));
+     graph[3].add(new vertex(3,1,3));
+     graph[3].add(new vertex(3,2,2));
+     graph[3].add(new vertex(3,4,8));
+     graph[4].add(new vertex(4,3,8));
+     graph[2].add(new vertex(2,3,2));
+
+}
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		int v=5;
+		ArrayList<vertex>graph[]=new ArrayList[v];
+		//creategraph(ArrayList<vertex>graph[]);
+        creategraph(graph);
+		 //System.out.println(graph[3].size());
+		 System.out.println(graph.length);
+		 for(int i=0;i<graph.length;i++){
+		     System.out.println(" vertex for "+ i);
+		 for(int j=0;j<graph[i].size();j++){
+		    vertex e= graph[i].get(j);
+		    // vertex e1=graph[3].get(i);
+		     System.out.println(e.src +" "+ e.dest+" "+e.weight);
+		 }
+		 }
+		
+	}
+}
